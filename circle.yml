@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 8.6.0
+
+dependencies:
+  pre:
+    - npm install -g npm@5.5.1
+
+test:
+  override:
+    - npm test

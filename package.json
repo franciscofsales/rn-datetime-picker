@@ -1,0 +1,58 @@
+{
+  "name": "rn-datetime-picker",
+  "version": "0.1.0",
+  "description": "Datetime picker for React Native - android and ios",
+  "main": "src/index",
+  "jsnext:main": "src/index",
+  "files": [
+    "*.md",
+    "src"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscofsales/rn-datetime-picker.git"
+  },
+  "tags": [
+    "react",
+    "react-native",
+    "Date",
+    "Time",
+    "DateTime",
+    "Picker"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "author": "Francisco Sales @franciscofsales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franciscofsales/rn-datetime-picker/issues"
+  },
+  "homepage": "https://github.com/franciscofsales/rn-datetime-picker#readme",
+  "devDependencies": {
+    "babel-jest": "^16.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-native": "^1.9.0",
+    "jest": "^16.1.0-alpha.691b0e22",
+    "jest-react-native": "^16.1.0-alpha.691b0e22",
+    "react": "~15.3.1",
+    "react-native": "^0.49.3",
+    "react-test-renderer": "^15.3.2"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "peerDependencies": {
+    "react-native": "^0.49.0"
+  }
+}
