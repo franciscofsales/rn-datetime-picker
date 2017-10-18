@@ -12,9 +12,9 @@ Demo is under examples folder
 To build and run a example app:
 
 ```bash
-git clone https://github.com/franciscofsales/react-native-datetime-picker
+git clone https://github.com/franciscofsales/rn-datetime-picker
 
-cd react-native-datetime-picker/examples/simple
+cd rn-datetime-picker/examples/simple
 
 npm install
 ```
@@ -36,7 +36,7 @@ react-native run-android
 #### Using npm:
 
 ```sh
-$ npm install --save react-native-datetime-picker
+$ npm install --save rn-datetime-picker
 ```
 
 
@@ -58,12 +58,9 @@ render() {
 
 | Prop | Type | Description |
 |---|---|---|
-|**`animation`**|`string<opacity|scale|slideLeft|slideRight>`|Animation preset.|
-|**`duration`**|`number`|Length of animation in milliseconds. _Default 300._|
-|**`animationFunc`**|`() => Animated animation object`|Function to define a custom animation.|
-|**`renderRow`**|`() => ReactElement<any>`|Function to render a row.|
-|**`onRemove`**|`() => ReactElement<any>`|Function to delete a row.|
-
+|**`value`**|`Date`|Value of the picker.|
+|**`onValueChange`**|`function`|Callback triggered with new value when the picker has a new value.|
+|**`mode`**|`String<date|time|datetime>`|Defines what should show: date picker, time picker, datetime picker.|
 
 
 ### Contributing
@@ -71,4 +68,4 @@ All contributions are very appreciated <3.
 
 
 ### License
-[MIT](https://raw.githubusercontent.com/franciscofsales/react-native-datetime-picker/master/LICENSE)
+[MIT](https://raw.githubusercontent.com/franciscofsales/rn-datetime-picker/master/LICENSE)
