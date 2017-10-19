@@ -1,6 +1,6 @@
 {
   "name": "rn-datetime-picker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Datetime picker for React Native - android and ios",
   "main": "src/index",
   "jsnext:main": "src/index",
