@@ -100,15 +100,19 @@ class List extends Component {
 	};
 
 	_renderItem = (item, idx) => {
+		let {fontSize} = this.props;
+		if(!fontSize || fontSize === undefined){
+			fontSize = 30;
+		}
 	    return (
 	      <View style={{flex: 1, alignItems: 'center', justifyContent: 'flex-end'}} key={`item_${idx}`}>
-	        <Text style={{fontSize: 30}}>{item}</Text>
+	        <Text style={{fontSize}}>{item}</Text>
 	      </View>
 	    );
 	}
 
 	_renderCards = () => {
-		const {height, markerColor, showMarker, markerWidth, markerHeight, lineColor} = this.props;
+		let {height, markerColor, showMarker, markerWidth, markerHeight, lineColor} = this.props;
 		const itemStyle = {
 			position: 'absolute',
 			height: height ? height : 75,

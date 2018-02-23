@@ -70,15 +70,94 @@ export default class DateTimePicker extends Component {
     if (!mode || mode === undefined) {
       mode = 'datetime';
     }
+    let {height, showMarker} = this.props;
+    let {markerColor, markerWidth, markerHeight, lineColor, lineWidth} = this.props;
+    if(!height || height === undefined) {
+      height = 100;
+    } 
+    if(!showMarker || showMarker === undefined) {
+      showMarker = false;
+    }
+    if(!markerColor || markerColor === undefined) {
+      markerColor = 'red';
+    }
+    if(!markerWidth || markerWidth === undefined) {
+      markerWidth = 3;
+    }
+    if(!markerHeight || markerHeight === undefined) {
+      markerHeight = 7;
+    }
+    if(!lineColor || lineColor === undefined) {
+      lineColor = 'rgba(30, 30, 30, 0.08)';
+    }
 
     return (
       <View style={styles.container}>
-        <Text>{this.state.day} - {this.months[this.state.month]} - {this.state.year}    {this.hours[this.state.hour]}:{this.minutes[this.state.minute]}</Text>
-        { (mode === 'date' || mode === 'datetime') && (<List height={100} value={this.months[this.state.month]} onSwipeLeft={this._handleMonth} onSwipeRight={this._handleMonth} showMarker data={this.months} />)}
-        { (mode === 'date' || mode === 'datetime') && (<List height={100} value={this.state.day} onSwipeLeft={this._handleDay} onSwipeRight={this._handleDay} showMarker data={days} />)}
-        { (mode === 'date' || mode === 'datetime') && (<List height={100} value={this.state.year} onSwipeLeft={this._handleYear} onSwipeRight={this._handleYear} showMarker data={this.years} />)}
-        { (mode === 'time' || mode === 'datetime') && (<List height={100} value={this.hours[this.state.hour]} onSwipeLeft={this._handleHours} onSwipeRight={this._handleHours} showMarker data={this.hours} />)}
-        { (mode === 'time' || mode === 'datetime') && (<List height={100} value={this.minutes[this.state.minute]} onSwipeLeft={this._handleMinutes} onSwipeRight={this._handleMinutes} showMarker data={this.minutes} />)}
+        { (mode === 'date' || mode === 'datetime') && (
+          <List 
+            markerWidth={markerWidth} 
+            markerColor={markerColor} 
+            markerHeight={markerHeight} 
+            lineWidth={lineWidth} 
+            lineColor={lineColor} 
+            height={height} 
+            value={this.months[this.state.month]} 
+            onSwipeLeft={this._handleMonth} 
+            onSwipeRight={this._handleMonth} 
+            showMarker={showMarker} 
+            data={this.months} />)}
+        { (mode === 'date' || mode === 'datetime') && (
+          <List 
+            markerWidth={markerWidth}
+            markerColor={markerColor} 
+            markerHeight={markerHeight}
+            lineWidth={lineWidth}  
+            lineColor={lineColor} 
+            height={height} 
+            value={this.state.day} 
+            onSwipeLeft={this._handleDay} 
+            onSwipeRight={this._handleDay} 
+            showMarker={showMarker} 
+            data={days} />)}
+        { (mode === 'date' || mode === 'datetime') && (
+          <List 
+            markerWidth={markerWidth} 
+            markerColor={markerColor} 
+            markerHeight={markerHeight} 
+            lineWidth={lineWidth} 
+            lineColor={lineColor} 
+            height={height} 
+            value={this.state.year} 
+            onSwipeLeft={this._handleYear} 
+            onSwipeRight={this._handleYear} 
+            showMarker={showMarker} 
+            data={this.years} />)}
+        { (mode === 'time' || mode === 'datetime') && (
+          <List 
+            markerWidth={markerWidth} 
+            markerColor={markerColor} 
+            markerHeight={markerHeight} 
+            lineColor={lineColor} 
+            lineWidth={lineWidth} 
+            height={height} 
+            value={this.hours[this.state.hour]} 
+            onSwipeLeft={this._handleHours} 
+            onSwipeRight={this._handleHours} 
+            showMarker={showMarker} 
+            data={this.hours} />)}
+        { (mode === 'time' || mode === 'datetime') && (
+          <List 
+            markerWidth={markerWidth} 
+            markerColor={markerColor} 
+            markerHeight={markerHeight} 
+            lineWidth={lineWidth} 
+            lineColor={lineColor} 
+            height={height} 
+            value={this.minutes[this.state.minute]} 
+            onSwipeLeft={this._handleMinutes} 
+            onSwipeRight={this._handleMinutes} 
+            showMarker={showMarker} 
+            data={this.minutes} />)}
       </View>
     );
   }

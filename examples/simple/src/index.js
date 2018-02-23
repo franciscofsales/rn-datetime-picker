@@ -3,7 +3,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import DateTimePicker from 'rn-datetime-picker';
+import DateTimePicker from './lib';
 
 const styles = StyleSheet.create({
   container: {
